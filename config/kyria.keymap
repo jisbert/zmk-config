@@ -18,6 +18,14 @@
 #define CONFIG  4
 
 / {
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		tri_layer {
+			if-layers = <NAVI SYMBOLS>;
+			then-layer = <CONFIG>;
+		};
+	};
+	
 	behaviors {
 		ateu: at_euro {
 			compatible = "zmk,behavior-mod-morph";
