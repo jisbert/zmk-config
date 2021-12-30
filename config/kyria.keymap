@@ -29,7 +29,7 @@
 		emqm: exclamation_mark_question_mark {
 			compatible = "zmk,behavior-mod-morph";
 			label = "EM_QM";
-			#binding-cells = <1>;
+			#binding-cells = <0>;
 			bindings = <&kp LS(N1)>, <&kp LS(MINUS)>;
 			mods = <(MOD_LSFT)>;
 		};
