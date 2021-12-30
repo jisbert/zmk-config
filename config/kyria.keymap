@@ -24,6 +24,7 @@
 			bindings = <&kp RA(N2)>, <&kp RA(E)>;
 			mods = <(MOD_LSFT)>;
 		};
+
 		emqm: exclamation_mark_question_mark {
 			compatible = "zmk,behavior-mod-morph";
 			label = "EM_QM";
