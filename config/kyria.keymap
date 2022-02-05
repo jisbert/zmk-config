@@ -106,15 +106,15 @@
 
 		configuration_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  SAI  | BRI | HUI | NMOD |BT_PRV|OUTUSB|                                          |OUTUSB| BT_PRV|  NMOD | HUI  |  BRI  | SAI  |
-// |  SAD  | BRD | HUD | ETOG |BT_NXT|OUT_BL|                                          |OUT_BL| BT_NXT|  ETOG | HUD  |  BRD  | SAD  |
-// |       |     |     | PMOD |BT_CLR|OUT_TG|         |         |  |         |         |OUT_TG| BT_CLR|  PMOD |      |       |      |
+// |  SAI  | BRI | HUI | E_ON | NMOD |      |                                          |OUTUSB|       |       |      |       | BT_C |
+// |  SAD  | BRD | HUD | EOFF | PMOD |      |                                          |OUT_BL| BT_0  | BT_1  | BT_2 | BT_3  | BT_4 |
+// |       |     |     |      |      |      |         |         |  |         |         |      |       |       |      |       |      |
 //                     |      |      |      |         |         |  |         |         |      |       |       |
 			bindings = <
-	&rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_HUI &rgb_ug RGB_EFF   &bt BT_PRV &out OUT_TOG                               &out OUT_TOG &bt BT_PRV &rgb_ug RGB_EFF   &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_SAI
-	&rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_HUD &ext_power EP_TOG &bt BT_NXT &out OUT_BLE                               &out OUT_BLE &bt BT_NXT &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_SAD
-	&none           &none           &none           &rgb_ug RGB_EFR   &bt BT_CLR &out OUT_USB &trans &trans   &trans &trans &out OUT_USB &bt BT_CLR &rgb_ug RGB_EFR   &none           &none           &none
-													&trans            &trans     &trans       &trans &trans   &trans &trans &trans       &trans     &trans
+	&rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_HUI &rgb_ug    EP_ON  &bt RGB_EFF &none                            &out OUT_USB &none        &none        &none        &none        &bt BT_CLR
+	&rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_HUD &ext_power EP_OFF &bt RGB_EFR &none                            &out OUT_BLE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+	&none           &none           &none           &none             &none      &none &trans &trans &trans &trans &none        &none        &none        &none        &none        &none
+													&trans            &trans     &trans       &trans &trans &trans &trans       &trans       &trans       &trans
 			>;
 		};
 	};
