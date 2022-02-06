@@ -64,15 +64,15 @@
 
 		navigation_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |       |     | CtZ | Ct+V | Ct+C | Ct+X |                                          | PaUp | Home  |  Up   | End  | C+Hom |      |
+// |       | CtY | CtZ | Ct+V | Ct+C | Ct+X |                                          | PaUp | Home  |  Up   | End  | C+Hom |      |
 // |       | GUI | ALT | CTRL | LSFT |      |                                          | PaDn | Left  | Down  |Right | C+End |      |
 // |       |     |     |      |      |      |         |         |  |         |         |      |       |       |      |       |      |
 //                     |      |      |      |         |         |  |         |         |      |       |       |
 			bindings = <
-	&trans &none    &kp LC(Z) &kp LC(V) &kp LC(C) &kp LC(X)                               &kp PG_UP &kp HOME &kp UP   &kp END   &kp LC(HOME) &none
-	&none  &kp LGUI &kp LALT  &kp LCTRL &kp LSHFT &none                                   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp LC(END)  &none
-	&none  &none    &none     &none     &none     &none     &trans &trans   &trans &trans &none     &none    &none    &none     &none        &none
-							  &trans    &trans    &trans    &trans &trans   &trans &trans &trans    &trans   &trans
+	&trans &kp LC(Y) &kp LC(Z) &kp LC(V) &kp LC(C) &kp LC(X)                               &kp PG_UP &kp HOME &kp UP   &kp END   &kp LC(HOME) &none
+	&none  &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &none                                   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp LC(END)  &none
+	&none  &none     &none     &none     &none     &none     &trans &trans   &trans &trans &none     &none    &none    &none     &none        &none
+							   &trans    &trans    &trans    &trans &trans   &trans &trans &trans    &trans   &trans
 			>;
 		};
 
