@@ -92,15 +92,15 @@
 
 		numpad_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |       | F6  | F1  |  F12 |  F3  |      |                                          |  .   |   4   |   5   |  6   | BSPC  |  €   |
-// |       | F11 | F4  |  F2  |  F5  |      |                                          |  0   |   1   |   2   |  3   |   +   |  -   |
-// |       | F7  | F8  |  F9  |  F10 |      |         |         |  |         |         |  ,   |   7   |   8   |  9   |   *   |  /   |
+// |       | F6  | F1  |  F12 |  F3  |      |                                          |  :   |   7   |   8   |  9   |   *   |  /   |
+// |       | F11 | F4  |  F2  |  F5  |      |                                          |  .   |   4   |   5   |  6   |   +   |  -   |
+// |       | F7  | F8  |  F9  |  F10 |      |         |         |  |         |  BSPC   |  0   |   1   |   2   |  3   |   ,   |  €   |
 //                     |      |      |      |         |         |  |         |         |      |       |       |
 			bindings = <
-	&trans &kp F6  &kp F1 &kp F12 &kp F3  &none                                     &kp DOT   &kp N4 &kp N5 &kp N6 &kp BSPC        &kp RA(E)
-	&none  &kp F11 &kp F4 &kp F2  &kp F5  &none                                     &kp N0    &kp N1 &kp N2 &kp N3 &kp KP_PLUS     &kp KP_MINUS
-	&none  &kp F7  &kp F8 &kp F9  &kp F10 &none  &trans &trans        &trans &trans &kp COMMA &kp N7 &kp N8 &kp N9 &kp KP_ASTERISK &kp KP_SLASH
-						  &trans  &trans  &trans &trans &trans        &trans &trans &trans    &trans &trans
+	&trans &kp F6  &kp F1 &kp F12 &kp F3  &none                                       &kp LS(COMMA) &kp N7 &kp N8 &kp N9 &kp KP_ASTERISK &kp KP_SLASH
+	&none  &kp F11 &kp F4 &kp F2  &kp F5  &none                                       &kp DOT       &kp N4 &kp N5 &kp N6 &kp KP_PLUS     &kp KP_MINUS
+	&none  &kp F7  &kp F8 &kp F9  &kp F10 &none  &trans &trans        &trans &kp BSPC &kp N0        &kp N1 &kp N2 &kp N3 &kp COMMA       &kp RA(E)
+						  &trans  &trans  &trans &trans &trans        &trans &trans   &trans        &trans &trans
 			>;
 		};
 
