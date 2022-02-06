@@ -106,15 +106,15 @@
 
 		configuration_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  SAI  | BRI | HUI | E_ON | NMOD |      |                                          |OUTUSB|       |       |      |       | BT_C |
-// |  SAD  | BRD | HUD | EOFF | PMOD |      |                                          |OUT_BL| BT_0  | BT_1  | BT_2 | BT_3  | BT_4 |
+// |  BT_C |     |     |      |      |OUTUSB|                                          | NMOD | BL_ON | E_ON  | HUI  |  BRI  | SAI  |
+// |  BT_4 | BT_3| BT_2| BT_1 | BT_0 |OUT_BL|                                          | PMOD | BL_OFF| EOFF  | HUD  |  BRD  | SAD  |
 // |       |     |     |      |      |      |         |         |  |         |         |      |       |       |      |       |      |
 //                     |      |      |      |         |         |  |         |         |      |       |       |
 			bindings = <
-	&rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_HUI &ext_power EP_ON  &rgb_ug RGB_EFF &none                              &out OUT_USB &none        &none        &none        &none        &bt BT_CLR
-	&rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_HUD &ext_power EP_OFF &rgb_ug RGB_EFR &none                              &out OUT_BLE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-	&none           &none           &none           &none             &none           &none  &trans &trans &trans &trans &none        &none        &none        &none        &none        &none
-													&trans            &trans          &trans &trans &trans &trans &trans &trans       &trans       &trans
+	&bt BT_CLR   &none        &none        &none        &none        &out OUT_USB                             &rgb_ug RGB_EFF &rgb_ug BL_ON  &ext_power EP_ON  &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_SAI
+	&bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &out OUT_BLE                             &rgb_ug RGB_EFR &rgb_ug BL_OFF &ext_power EP_OFF &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_SAD
+	&none        &none        &none        &none        &none        &none        &trans &trans &trans &trans &none           &none          &none             &none           &none           &none
+										   &trans       &trans       &trans       &trans &trans &trans &trans &trans          &trans         &trans
 			>;
 		};
 	};
