@@ -15,7 +15,7 @@
 #define DEFAULT 0
 #define NAVI    1
 #define SYMBOLS 2
-#define NUMPAD  3
+#define NUMERIC 3
 #define CONFIG  4
 
 / {
@@ -53,12 +53,12 @@
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   Ç  |
 // |   º   |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   Ñ   |   ´  |
 // |   ¿   |  Z  |  X  |  C   |  V   |  B   | DEL LSF |   ALT   |  |   TAB   | L SHIFT |  N   |  M    |  ,    |  .   |   /   |   ?  |
-//                     |  @   | NUMP | NAV  |  BSPC   |   CTRL  |  |  ENTER  |  SPACE  | SYM  | GUI   |  ≡    |
+//                     |  @   | NUM  | NAV  |  BSPC   |   CTRL  |  |  ENTER  |  SPACE  | SYM  | GUI   |  ≡    |
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E       &kp R    &kp T                                                       &kp Y    &kp U       &kp I     &kp O   &kp P    &kp NON_US_HASH
 	&kp GRAVE &kp A &kp S &kp D       &kp F    &kp G                                                       &kp H    &kp J       &kp K     &kp L   &kp SEMI &kp SQT
 	&kp EQUAL &kp Z &kp X &kp C       &kp V    &kp B    &mt LSHFT DEL  &kp LALT   &kp TAB   &mt LSHFT CAPS &kp N    &kp M       &kp COMMA &kp DOT &kp FSLH &emqm
-					&ateu &tog NUMPAD &mo NAVI &kp BSPC &kp LCTRL      &kp RET    &kp SPACE &mo SYMBOLS    &kp LGUI &kp K_CMENU
+					&ateu &mo NUMERIC &mo NAVI &kp BSPC &kp LCTRL      &kp RET    &kp SPACE &mo SYMBOLS    &kp LGUI &kp K_CMENU
 			>;
 		};
 
@@ -90,17 +90,17 @@
 			>;
 		};
 
-		numpad_layer {
+		numeric_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |       | F6  | F1  |  F12 |  F3  |      |                                          |  :   |   7   |   8   |  9   |   *   |  /   |
-// |       | F11 | F4  |  F2  |  F5  |      |                                          |  .   |   4   |   5   |  6   |   +   |  -   |
-// |       | F7  | F8  |  F9  |  F10 |      |         |         |  |         |  BSPC   |  0   |   1   |   2   |  3   |   ,   |  €   |
+// |       | F1  | F2  |  F3  |  F4  |   €  |                                          | BSPC |   F5  |   F11 |  F12 |       | BSPC |
+// |       |  1  |  2  |   3  |   4  |   5  |                                          |  6   |   7   |   8   |  9   |   0   |      |
+// |       |     |     |   +  |   ,  |   *  |         |         |  |         |         |  /   |   .   |   :   |  -   |       |      |
 //                     |      |      |      |         |         |  |         |         |      |       |       |
 			bindings = <
-	&trans &kp F6  &kp F1 &kp F12 &kp F3  &none                                       &kp LS(DOT) &kp N7 &kp N8 &kp N9 &kp KP_ASTERISK &kp KP_SLASH
-	&none  &kp F11 &kp F4 &kp F2  &kp F5  &none                                       &kp DOT     &kp N4 &kp N5 &kp N6 &kp KP_PLUS     &kp KP_MINUS
-	&none  &kp F7  &kp F8 &kp F9  &kp F10 &none  &trans &trans        &trans &kp BSPC &kp N0      &kp N1 &kp N2 &kp N3 &kp COMMA       &kp RA(E)
-						  &trans  &trans  &trans &trans &trans        &trans &trans   &trans      &trans &trans
+	&trans &kp F1 &kp F2 &kp F3      &kp F4    &kp RA(E)                                      &kp BSPC     &kp F5  &kp F11     &kp F12      &none  &kp BSPC
+	&none  &kp N1 &kp N2 &kp N3      &kp N4    &kp N5                                         &kp N6       &kp N7  &kp N8      &kp N9       &kp N0 &none
+	&none  &none  &none  &kp KP_PLUS &kp COMMA &kp KP_ASTERISK  &trans &trans   &trans &trans &kp KP_SLASH &kp DOT &kp LS(DOT) &kp KP_MINUS &none  &none
+						 &trans      &trans    &trans           &trans &trans   &trans &trans &trans       &trans      &trans
 			>;
 		};
 
