@@ -55,10 +55,10 @@
 // |   ¿   |  Z  |  X  |  C   |  V   |  B   | DEL LSF |   ALT   |  |   TAB   | L SHIFT |  N   |  M    |  ,    |  .   |   /   |   ?  |
 //                     |  @   | NUM  | NAV  |  BSPC   |   CTRL  |  |  ENTER  |  SPACE  | SYM  | GUI   |  ≡    |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp E       &kp R    &kp T                                                       &kp Y    &kp U       &kp I     &kp O   &kp P    &kp NON_US_HASH
-	&kp GRAVE &kp A &kp S &kp D       &kp F    &kp G                                                       &kp H    &kp J       &kp K     &kp L   &kp SEMI &kp SQT
-	&kp EQUAL &kp Z &kp X &kp C       &kp V    &kp B    &mt LSHFT DEL  &kp LALT   &kp TAB   &mt LSHFT CAPS &kp N    &kp M       &kp COMMA &kp DOT &kp FSLH &emqm
-					&ateu &mo NUMERIC &mo NAVI &kp BSPC &kp LCTRL      &kp RET    &kp SPACE &mo SYMBOLS    &kp LGUI &kp K_CMENU
+	&kp ESC   &kp Q &kp W &kp E       &kp R    &kp T                                                    &kp Y    &kp U       &kp I     &kp O   &kp P    &kp NON_US_HASH
+	&kp GRAVE &kp A &kp S &kp D       &kp F    &kp G                                                    &kp H    &kp J       &kp K     &kp L   &kp SEMI &kp SQT
+	&kp EQUAL &kp Z &kp X &kp C       &kp V    &kp B    &mt LSHFT DEL  &kp LALT   &kp TAB   &kb LSHFT   &kp N    &kp M       &kp COMMA &kp DOT &kp FSLH &emqm
+					&ateu &kb CAPS    &mo NAVI &kp BSPC &kp LCTRL      &kp RET    &kp SPACE &mo SYMBOLS &kp LGUI &kp K_CMENU
 			>;
 		};
 
