@@ -53,7 +53,7 @@
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   Ç  |
 // |   º   |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   Ñ   |   ´  |
 // |   ¿   |  Z  |  X  |  C   |  V   |  B   | DEL LSF |   ALT   |  |   TAB   | L SHIFT |  N   |  M    |  ,    |  .   |   -   |   ?  |
-//                     |  @   | NUM  | NAV  |  BSPC   |   CTRL  |  |  ENTER  |  SPACE  | SYM  | GUI   |  ≡    |
+//                     |  @   | CAPS | NAV  |  BSPC   |   CTRL  |  |  ENTER  |  SPACE  | SYM  | GUI   |  ≡    |
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp E       &kp R    &kp T                                                    &kp Y    &kp U       &kp I     &kp O   &kp P    &kp NON_US_HASH
 	&kp GRAVE &kp A &kp S &kp D       &kp F    &kp G                                                    &kp H    &kp J       &kp K     &kp L   &kp SEMI &kp SQT
