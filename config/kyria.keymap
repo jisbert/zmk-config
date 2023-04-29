@@ -105,11 +105,11 @@
 		};
 
 		configuration_layer {
-// -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |        |        | RGB_BRI | RGB_SAI | RGB_HUI | RGB_EFF |                                          |        | C_NEXT | C_VOL_UP  | OUT_USB  | BT_NEXT |        |
-// |        |        | RGB_BRD | RGB_SAD | RGB_HUD | RGB_TOG |                                          |        | C_PP   | C_MUTE    | OUT_BLE  | BT_CLR  |        |
-// |        |        |         |         |         | RGB_EFR |         |         |  |         |         |        | C_PREV | C_VOL_DN  |          | BT_PREV |        |
-//                             |         |         |         |         |         |  |         |         |        |        |           |
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |        |    | BRI | SAI  | HUI  | EFF  |                                          |       | NEXT  | VOLUP| OUSB | BTNEXT|      |
+// |        |    | BRD | SAD  | HUD  | TOG  |                                          |       | PLAY  | MUTE | OBLE | BT_CLR|      |
+// |        |    |     |      |      | EFR  |         |         |  |         |         |       | PREV  | VOLDN|      | BTPREV|      |
+//                     |      |      |      |         |         |  |         |         |       |       |      |
 			bindings = <
 	&trans &none &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF                             &none  &kp C_NEXT &kp C_VOL_UP &out OUT_USB &bt BT_NEXT &none
 	&none  &none &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_TOG                             &none  &kp C_PP   &kp C_MUTE   &out OUT_BLE &bt BT_CLR  &none
