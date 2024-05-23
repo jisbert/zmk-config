@@ -14,8 +14,8 @@
 
 #define DEFAULT  0
 #define NAVI     1
-#define SYMBOLS  2
-#define FUNCTION 3
+#define FUNCTION 2
+#define SYMBOLS  3
 #define NUMERIC  4
 #define CONFIG   5
 
@@ -69,20 +69,6 @@
 			>;
 		};
 
-		symbols_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |       |  |  |  &  |   {  |  }   |  "   |                                          |  $   |   [   |   ]   |  %   |   @   |      |
-// |   -   |  *  |  +  |   (  |  )   |  =   |                                          |  ;   |   <   |   >   |  /   |   \   |      |
-// |       |     |     |   ~  |  `   |  '   |         |         |  |         |         |  #   |   ^   |   €   |      |  NUM  |      |
-//                     |      |      |      |         |         |  |         |         |      |       |       |
-			bindings = <
-	&trans    &kp RA(N1)   &kp LS(N6) &kp RA(SQT) &kp RA(NON_US_HASH) &kp LS(N2)                               &kp LS(N4)    &kp RA(LBKT)    &kp RA(RBKT)        &kp LS(N5) &kp RA(N2)    &none
-	&kp SLASH &kp LS(RBKT) &kp RBKT   &kp LS(N8)  &kp LS(N9)          &kp LS(N0)                               &kp LS(COMMA) &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp LS(N7) &kp RA(GRAVE) &none
-	&none     &none        &none      &kp RA(N4)  &kp LBKT            &kp MINUS  &trans &trans   &trans &trans &kp RA(N3)    &kp LS(LBKT)    &kp RA(E)           &none      &mo NUMERIC   &none
-									  &trans      &trans              &trans     &trans &trans   &trans &trans &trans        &trans          &trans
-			>;
-		};
-
 		function_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                                          |      |  F5   |  F11  | F12  |       |      |
@@ -94,6 +80,20 @@
 	&none  &none  &none &none  &none &none                                 &none  &kp F1 &kp F2  &kp F3  &kp LA(F4) &none
 	&none  &trans &none &none  &none &none   &trans &trans   &trans &trans &none  &none  &none   &none   &none      &none
 						&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+			>;
+		};
+
+		symbols_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |       |  |  |  &  |   {  |  }   |  "   |                                          |  $   |   [   |   ]   |  %   |   @   |      |
+// |   -   |  *  |  +  |   (  |  )   |  =   |                                          |  ;   |   <   |   >   |  /   |   \   |      |
+// |       |     |     |   ~  |  `   |  '   |         |         |  |         |         |  #   |   ^   |   €   |      |  NUM  |      |
+//                     |      |      |      |         |         |  |         |         |      |       |       |
+			bindings = <
+	&trans    &kp RA(N1)   &kp LS(N6) &kp RA(SQT) &kp RA(NON_US_HASH) &kp LS(N2)                               &kp LS(N4)    &kp RA(LBKT)    &kp RA(RBKT)        &kp LS(N5) &kp RA(N2)    &none
+	&kp SLASH &kp LS(RBKT) &kp RBKT   &kp LS(N8)  &kp LS(N9)          &kp LS(N0)                               &kp LS(COMMA) &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp LS(N7) &kp RA(GRAVE) &none
+	&none     &none        &none      &kp RA(N4)  &kp LBKT            &kp MINUS  &trans &trans   &trans &trans &kp RA(N3)    &kp LS(LBKT)    &kp RA(E)           &none      &mo NUMERIC   &none
+									  &trans      &trans              &trans     &trans &trans   &trans &trans &trans        &trans          &trans
 			>;
 		};
 
